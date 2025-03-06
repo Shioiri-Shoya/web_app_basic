@@ -80,9 +80,6 @@ def main():
             nbins=30, 
             title='Examスコアの分布'
             )
-        # 棒の間隔を調整 & 境界線を追加
-        fig2.update_traces(marker=dict(line=dict(color='black', width=1)))
-        fig2.update_layout(bargap=0.1) 
         st.plotly_chart(fig2)
     
         # Q11: final_result ごとの合計スコアを箱ひげ図で可視化してください。
