@@ -3,11 +3,11 @@
 
 # 以下のライブラリを使用するため、事前にターミナル（コマンドプロンプト）でインストールしてください。
 
+import streamlit as st
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import scipy.stats as stats
-import streamlit as st
 import plotly.express as px
 
 # Q: 以下の...部分を埋めて、コードを完成させてください。
