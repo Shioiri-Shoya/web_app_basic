@@ -1,8 +1,7 @@
-pandas
-numpy
-matplotlib==3.7.1
-scipy
 streamlit
+requests
+pandas
 plotly
-pillow
-cycler
+seaborn
+matplotlib
+scipy
