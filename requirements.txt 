@@ -1,8 +1,8 @@
 pandas
 numpy
-pillow
-cycler
-matplotlib
+matplotlib==3.7.1
 scipy
 streamlit
 plotly
+pillow
+cycler
