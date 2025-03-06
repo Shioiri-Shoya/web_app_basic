@@ -72,11 +72,19 @@ def main():
         st.subheader('モジュールCCC, プレゼンテーション2014JのExamスコア')
         assessments = pd.merge(student_assessment, module_assessments, on='id_assessment', how='left')
         assessments_CCC_2014J_Exam = assessments.query(
-            'code_module == "CCC" and code_presentation == "2014J" and assessment_type == "Exam"'
-        ).reset_index(drop=True)
-        fig2 = px.histogram(assessments_CCC_2014J_Exam, x='score', nbins=30, title='Examスコアの分布')
+             'code_module == "CCC" and code_presentation == "2014J" and assessment_type == "Exam"'
+             ).reset_index(drop=True)
+        fig2 = px.histogram(
+            assessments_CCC_2014J_Exam, 
+            x='score', 
+            nbins=30, 
+            title='Examスコアの分布'
+            )
+        # 棒の間隔を調整 & 境界線を追加
+        fig2.update_traces(marker=dict(line=dict(width=1, color='black')))
+        fig2.update_layout(bargap=0.1)  # 0に近いと棒同士がくっつく
         st.plotly_chart(fig2)
-
+    
         # Q11: final_result ごとの合計スコアを箱ひげ図で可視化してください。
         st.subheader('最終結果ごとの合計スコア')
         assessments['weight_score'] = assessments['score'] * assessments['weight'] / 100
