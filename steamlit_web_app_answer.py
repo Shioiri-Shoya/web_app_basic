@@ -81,7 +81,8 @@ def main():
             title='Examスコアの分布'
             )
         # 棒の間隔を調整 & 境界線を追加
-        fig2.update_traces(marker=dict(line=dict(width=5, color='black')))
+        fig2.update_traces(marker=dict(line=dict(color='black', width=1)))
+        fig2.update_layout(bargap=0.1) 
         st.plotly_chart(fig2)
     
         # Q11: final_result ごとの合計スコアを箱ひげ図で可視化してください。
@@ -106,7 +107,7 @@ def main():
     # また、以下の３つの項目を満たすように作成して下さい。
     # ① purchase_price のヒストグラムの表示
     # ② 1標本t検定を実装し、ボタンを押すと結果が表示
-    # ③ 2標本t検定を実装し、A社とB社の purchase_price を比較
+    # ③ 2標本t検定を実装し、A社とB社の purchase_price を比較（「1-3_Pythonによる統計モデリング」の「2-2. 2標本のt検定」で行ったことを参考にしてください。）
     
     with tab2:
         st.header('小売店舗ビジネスデータの分析')
