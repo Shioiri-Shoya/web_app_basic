@@ -5,6 +5,7 @@
 
 import pandas as pd
 import numpy as np
+matplotlib.use('Agg')  # Streamlit でのバックエンド指定
 import matplotlib.pyplot as plt
 import scipy.stats as stats
 import streamlit as st
