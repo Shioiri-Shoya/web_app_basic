@@ -82,7 +82,7 @@ def main():
             )
         # 棒の間隔を調整 & 境界線を追加
         fig2.update_traces(marker=dict(line=dict(width=1, color='black')))
-        fig2.update_layout(bargap=4)  # 0に近いと棒同士がくっつく
+        fig2.update_layout(bargap=0.8)  # 0に近いと棒同士がくっつく
         st.plotly_chart(fig2)
     
         # Q11: final_result ごとの合計スコアを箱ひげ図で可視化してください。
